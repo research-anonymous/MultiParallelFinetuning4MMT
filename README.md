@@ -1,3 +1,6 @@
 # MultiParallelFinetuning4MMT
 
-The code and model will be released soon.
+
+
+The English-centric, boosted and upper bound models (complete translation) will be released soon.
+
