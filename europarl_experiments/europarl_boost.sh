@@ -20,7 +20,6 @@ source activate py37cuda11
 export CUDA_HOME="/usr/local/cuda-11.0"
 export PATH="${CUDA_HOME}/bin:${PATH}"
 export LIBRARY_PATH="${CUDA_HOME}/lib64:${LIBRARY_PATH}"
-export LD_LIBRARY_PATH="/home/diwu/cudalibs:/usr/lib64/nvidia:${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}"
 
 YOUR_DATA_DIR=xxxx
 YOUR_CHECKPOINT_DIR=xxxx
