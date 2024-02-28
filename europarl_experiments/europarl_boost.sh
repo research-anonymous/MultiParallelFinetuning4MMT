@@ -15,7 +15,6 @@ NUM=$1
 SEED=$2
 FREQ=$3
 
-export PATH=/home/diwu/anaconda3/bin:$PATH
 source activate py37cuda11
 export CUDA_HOME="/usr/local/cuda-11.0"
 export PATH="${CUDA_HOME}/bin:${PATH}"
