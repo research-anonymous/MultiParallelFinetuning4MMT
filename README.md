@@ -10,8 +10,8 @@ only 100 multi-parallel samples while preserving English-centric translation qua
 </div>
 
 
-When investigating the size effect of fine-tuning data and its transfer capabilities:
-1) we found that already a small, randomly sampled set of fine-tuning directions is sufficient to achieve comparable improvements.
+When investigating the size effect of fine-tuning data and its transfer capabilities, we found that :
+1) Already a small, randomly sampled set of fine-tuning directions is sufficient to achieve comparable improvements.
 2) The resulting non-English performance is close to the complete translation upper bound. 
 3) Even in a minimal setting---fine-tuning with only one single sample---the well-known off-target issue is almost completely resolved, explaining parts--but not all---of the observed improvements in translation quality
 
