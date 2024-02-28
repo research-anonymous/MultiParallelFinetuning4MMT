@@ -22,8 +22,12 @@ export PATH="${CUDA_HOME}/bin:${PATH}"
 export LIBRARY_PATH="${CUDA_HOME}/lib64:${LIBRARY_PATH}"
 export LD_LIBRARY_PATH="/home/diwu/cudalibs:/usr/lib64/nvidia:${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}"
 
-DATA_DIR=/ivi/ilps/personal/dwu/data/europarl_analysis/europarl-MP-${NUM}-${SEED}
-CHECKPOINT_DIR=/ivi/ilps/personal/dwu/checkpoints/multi-parallel/europarl-analysis-${NUM}-${SEED}-${FREQ}
+YOUR_DATA_DIR=xxxx
+YOUR_CHECKPOINT_DIR=xxxx
+YOUR_BASE_CHECKPOINT=xxxx
+
+DATA_DIR=$YOUR_DATA_DIR/europarl-MP-${NUM}-${SEED}
+CHECKPOINT_DIR=$YOUR_CHECKPOINT_DIR/europarl-analysis-${NUM}-${SEED}-${FREQ}
 
 fairseq-train ${DATA_DIR}/data_bin \
     --save-dir ${CHECKPOINT_DIR} \
@@ -45,7 +49,7 @@ fairseq-train ${DATA_DIR}/data_bin \
     --save-interval-updates 100 --keep-interval-updates 1 \
     --no-epoch-checkpoints --seed 222 --log-format simple --log-interval 20 \
     --skip-invalid-size-inputs-valid-test \
-    --finetune-from-model /ivi/ilps/personal/dwu/checkpoints/multi-parallel/baseline-2gpu/checkpoint_best.pt
+    --finetune-from-model $YOUR_BASE_CHECKPOINT
 
 # eval
 PAIRS=('en-da' 'da-en' 'en-de' 'de-en' 'en-es' 'es-en' 'en-fi' 'fi-en' 'en-fr' 'fr-en' 'en-it' 'it-en' 'en-nl' 'nl-en' 'da-de' 'de-da' 'da-es' 'es-da' 'da-fi' 'fi-da' 'da-fr' 'fr-da' 'da-it' 'it-da' 'da-nl' 'nl-da' 'de-es' 'es-de' 'de-fi' 'fi-de' 'de-fr' 'fr-de' 'de-it' 'it-de' 'de-nl' 'nl-de' 'es-fi' 'fi-es' 'es-fr' 'fr-es' 'es-it' 'it-es' 'es-nl' 'nl-es' 'fi-fr' 'fr-fi' 'fi-it' 'it-fi' 'fi-nl' 'nl-fi' 'fr-it' 'it-fr' 'fr-nl' 'nl-fr' 'it-nl' 'nl-it')
