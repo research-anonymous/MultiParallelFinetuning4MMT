@@ -4,6 +4,12 @@ can be achieved by simply fine-tuning with a very small amount of multi-parallel
 For example, on the EC30 dataset, we obtain up to +21.7 ChrF non-English overall improvements (870 directions) by using
 only 100 multi-parallel samples while preserving English-centric translation quality. 
 
+
+<div style="text-align:center;">
+    <img src="figures/Figure-1.png" width="300" height="300">
+</div>
+
+
 When investigating the size effect of fine-tuning data and its transfer capabilities:
 1) we found that already a small, randomly sampled set of fine-tuning directions is sufficient to achieve comparable improvements.
 2) The resulting non-English performance is close to the complete translation upper bound. 
