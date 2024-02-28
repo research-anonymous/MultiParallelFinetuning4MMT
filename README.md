@@ -1,14 +1,15 @@
 # How Far Can 100 Samples Go?
+
+## Introduction
 In this paper, we show that for an English-centric model, surprisingly large zero-shot improvements
 can be achieved by simply fine-tuning with a very small amount of multi-parallel data. 
-For example, on the EC30 dataset, we obtain up to +21.7 ChrF non-English overall improvements (870 directions) by using
-only 100 multi-parallel samples while preserving English-centric translation quality. 
-
 
 <div style="text-align:center;">
     <img src="figures/Figure-1.png" width="300" height="300">
 </div>
 
+For example, on the EC30 dataset, we obtain up to +21.7 ChrF non-English overall improvements (870 directions) by using
+only 100 multi-parallel samples while preserving English-centric translation quality.
 
 When investigating the size effect of fine-tuning data and its transfer capabilities, we found that :
 1) Already a small, randomly sampled set of fine-tuning directions is sufficient to achieve comparable improvements.
